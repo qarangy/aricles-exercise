@@ -19,9 +19,9 @@ body {
     height: 100%;
     font-size: 16px;
     line-height: 1.5;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto Condensed', 'Bebas Neue', 'Arial', sans-serif;
     background-color: #fff;
-    color: #222;
+    color: #888;
 }
 
 img {
@@ -43,4 +43,93 @@ img {
 /* MAIN CONTENT */
 .main-content {
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.global-wrapper {
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    background-image: url('..//img/hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+}
+.hero-content {
+    width: 285px;
+}
+.hero-heading {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: normal;
+    letter-spacing: 2px;
+    font-family: 'Bebas Neue', 'Roboto Condensed', 'Arial', sans-serif;
+    color: #fff;
+}
+.hero-link {
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', 'Roboto Condensed', 'Arial', sans-serif;
+    color: #fff;
+    background-color: #1E90FF;
+}
+
+.hero-link:hover {
+    background: rgba(30, 144, 255, 0.8);
+}
+
+.hero-link:active {
+    background: rgba(30, 144, 255, 0.6);
+}
+
+.hero-link-inner {
+    display: flex;
+}
+
+.hero-link-inner::before {
+    width: 20px;
+    height: 20px;
+    margin-right: 12px;
+    background-image: url(..//img/star.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    content: '';
+}
+
+.hero-link-text {
+    
+}
+
+
+
+/* RETINA */
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+
+    .hero {
+        background-image: url(..//img/hero-bg@2x.jpg);
+    }
 }
